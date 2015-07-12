@@ -17,7 +17,7 @@ def measure():
     time.sleep(0.00001)
     GPIO.output(__gproTrig, False)
     start = time.time()
-    print("measure--1")
+    print("measure--1--", GPIO.input(__gproEcho))
     #延时读数
     while GPIO.input(__gproEcho) == 0:
         start = time.time()
