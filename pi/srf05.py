@@ -8,7 +8,7 @@ __gproEcho = 12
 def init():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(__gproTrig, GPIO.OUT)
-    GPIO.setup(__gproEcho, GPIO.In)
+    GPIO.setup(__gproEcho, GPIO.IN)
 
 
 def measure():
@@ -20,7 +20,7 @@ def measure():
     #延时读书
     while GPIO.input(__gproEcho) == 0:
         start = time.time()
-    while GPIO.input(__gproEcho)==1:
+    while GPIO.input(__gproEcho) == 1:
         stop = time.time()
     #根据驱动公式计算测距结果
     elapsed = stop-start
