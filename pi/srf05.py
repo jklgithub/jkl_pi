@@ -17,13 +17,16 @@ def measure():
     time.sleep(0.00001)
     GPIO.output(__gproTrig, False)
     start = time.time()
-    #延时读书
+    print("measure--1")
+    #延时读数
     while GPIO.input(__gproEcho) == 0:
         start = time.time()
+    print("measure--2")
     while GPIO.input(__gproEcho) == 1:
         stop = time.time()
+    print("measure--3")
     #根据驱动公式计算测距结果
-    elapsed = stop-start
+    elapsed = stop - start
     distance = (elapsed * 34300)/2
 
     return distance
@@ -35,4 +38,4 @@ if __name__ == '__main__':
         print("srf05-start:", i)
         dis = measure()
         print('--------dis:', dis)
-        sleep(1)
+        sleep(2)
