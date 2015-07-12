@@ -4,7 +4,7 @@ import time
 from time import ctime, sleep
 
 __gproTrig = 16
-__gproEcho = 20
+__gproEcho = 12
 def init():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(__gproTrig, GPIO.OUT)
