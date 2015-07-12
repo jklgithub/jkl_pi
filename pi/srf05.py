@@ -30,6 +30,7 @@ def measure():
 
 
 if __name__ == '__main__':
+    init()
     for i in range(60):
         print("srf05-start:", i)
         dis = measure()
