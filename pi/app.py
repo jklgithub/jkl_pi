@@ -1,5 +1,5 @@
 #app.py coding:utf-8 树莓派应用入口
-import lib.event
+import event
 import threading
 import srf05
 from time import ctime, sleep
@@ -11,12 +11,12 @@ def view_distance(p):
     print('--------view_distance:', p)
 
 def eventsInit():
-    lib.event.bind('srf05_dis', view_distance)
+    event.bind('srf05_dis', view_distance)
     print('----eventsInit ok----')
 
 def events():
     eventsInit()
-    lib.event.start(60)
+    event.start(60)
 
 def time2():
     srf05.init()
@@ -24,7 +24,7 @@ def time2():
         print("srf05-start:", i)
         dis = srf05.measure()
         print('--------dis:', dis)
-        lib.event.trigger('srf05_dis', dis)
+        event.trigger('srf05_dis', dis)
         sleep(1)
 
 threads = []
