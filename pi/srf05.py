@@ -1,6 +1,7 @@
 #app.py coding:utf-8 srf05超声测距模块驱动
 import RPi.GPIO as GPIO
 import time
+from time import ctime, sleep
 
 __gproTrig = 16
 __gproEcho = 20
@@ -26,3 +27,11 @@ def measure():
     distance = (elapsed * 34300)/2
 
     return distance
+
+
+if __name__ == '__main__':
+    for i in range(60):
+        print("srf05-start:", i)
+        dis = measure()
+        print('--------dis:', dis)
+        sleep(1)
