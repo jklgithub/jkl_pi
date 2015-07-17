@@ -13,6 +13,8 @@ def init():
 
 def measure():
     #启动测距
+    GPIO.output(__gproTrig, False)
+    time.sleep(0.0001)
     GPIO.output(__gproTrig, True)
     time.sleep(0.00001)
     GPIO.output(__gproTrig, False)
@@ -29,7 +31,7 @@ def measure():
     start   = 0
     stop    = 0
     while start == 0 or stop == 0:
-        print("measure--1--:", time.time(), ", GPIO.input:", GPIO.input(__gproEcho))
+   #     print("measure--1--:", time.time(), ", GPIO.input:", GPIO.input(__gproEcho))
         if stop == 0 and start == 0 and GPIO.input(__gproEcho) == 0:
             start = time.time()
             print("measure--2")
