@@ -51,8 +51,8 @@
       <file leaf-file-name="srf05.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi/srf05.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51778245" vertical-offset="0" max-vertical-offset="956">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.8158996" vertical-offset="0" max-vertical-offset="956">
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding>
                 <element signature="e#35#58#0" expanded="true" />
               </folding>
@@ -875,8 +875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi/srf05.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51778245" vertical-offset="0" max-vertical-offset="956">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.8158996" vertical-offset="0" max-vertical-offset="956">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
           <folding>
             <element signature="e#35#58#0" expanded="true" />
           </folding>
