@@ -31,15 +31,14 @@ def measure():
     start   = 0
     stop    = 0
     while start == 0 or stop == 0:
-        print("measure----1--:", time.time(), ", GPIO.input:", GPIO.input(__gproEcho))
-        if stop == 0 and start == 0 and GPIO.input(__gproEcho) == 0:
-            start = time.time()
+        #    print("measure----1--:", time.time(), ", GPIO.input:", GPIO.input(__gproEcho))
+        val     = GPIO.input(__gproEcho)
+        if stop == 0 and start == 0 and val == 1:
             print("measure--2")
-        if start > 0 and stop == 0 and GPIO.input(__gproEcho) == 1:
-            stop = time.time()
+            start = time.time()
+        if start > 0 and stop == 0 and val == 0:
             print("measure--3")
-
-
+            stop = time.time()
     #根据驱动公式计算测距结果
     elapsed = stop - start
     print("measure--4:start:", start, "  stop:", stop, '  elapsed:', elapsed)
