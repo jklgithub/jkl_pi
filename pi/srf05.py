@@ -16,15 +16,27 @@ def measure():
     GPIO.output(__gproTrig, True)
     time.sleep(0.00001)
     GPIO.output(__gproTrig, False)
-    start = time.time()
-    print("measure--1--", GPIO.input(__gproEcho))
+   # start = time.time()
+  #  print("measure--1--", GPIO.input(__gproEcho))
     #延时读数
-    while GPIO.input(__gproEcho) == 0:
-        start = time.time()
-    print("measure--2")
-    while GPIO.input(__gproEcho) == 1:
-        stop = time.time()
-    print("measure--3")
+  #  while GPIO.input(__gproEcho) == 0:
+  #      start = time.time()
+  #  print("measure--2")
+  #  while GPIO.input(__gproEcho) == 1:
+  #      stop = time.time()
+  #  print("measure--3")
+
+    start   = 0
+    stop    = 0
+    while start == 0 or stop == 0:
+        print("measure--1--:", time.time(), ", GPIO.input:", GPIO.input(__gproEcho))
+        if stop == 0 and start == 0 and GPIO.input(__gproEcho) == 0:
+            start = time.time()
+            print("measure--2")
+        if start > 0 and stop == 0 and GPIO.input(__gproEcho) == 1:
+            stop = time.time()
+            print("measure--3")
+
     #根据驱动公式计算测距结果
     elapsed = stop - start
     distance = (elapsed * 34300)/2
