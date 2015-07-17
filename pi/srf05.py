@@ -39,8 +39,10 @@ def measure():
             stop = time.time()
             print("measure--3")
 
+
     #根据驱动公式计算测距结果
     elapsed = stop - start
+    print("measure--4:start:", start, "  stop:", stop, '  elapsed:', elapsed)
     distance = (elapsed * 34300)/2
 
     return distance
