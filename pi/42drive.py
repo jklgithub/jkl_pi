@@ -13,7 +13,7 @@ def init():
 
 def run():
     GPIO.output(__gproDir, False)
-    for i in range(1000):
+    for i in range(10000):
         print('--------------step:', i)
         if i % 2 == 0:
             GPIO.output(__gproSrep, True)
@@ -25,3 +25,4 @@ if __name__ == '__main__':
     init()
     time.sleep(1)
     run()
+    GPIO.cleanup()
