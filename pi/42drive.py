@@ -12,15 +12,16 @@ def init():
     GPIO.setup(__gproDir, GPIO.OUT)
 
 def run():
-    GPIO.output(__gproDir, True)
-    for i in range(3000):
+    GPIO.output(__gproDir, False)
+    for i in range(1000):
         print('--------------step:', i)
         if i % 2 == 0:
             GPIO.output(__gproSrep, True)
         else:
             GPIO.output(__gproSrep, False)
-        time.sleep(0.01)
+        time.sleep(0.001)
 
 if __name__ == '__main__':
     init()
+    time.sleep(1)
     run()
