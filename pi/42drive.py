@@ -6,7 +6,7 @@ from time import ctime, sleep
 
 __gproSrep  = 13
 __gproDir   = 19
-__sleepTime = 0.001
+__sleepTime = 0.0001
 def init():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(__gproSrep, GPIO.OUT)
