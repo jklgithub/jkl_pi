@@ -6,7 +6,7 @@ from time import ctime, sleep
 
 __gproSrep  = 13
 __gproDir   = 19
-__sleepTime = 1 / (24000 * 2)
+__sleepTime = 0.00002 #1 / (24000 * 2)
 def init():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(__gproSrep, GPIO.OUT)
@@ -14,7 +14,7 @@ def init():
 
 def run():
     print('--------------__sleepTime:', __sleepTime)
-    GPIO.output(__gproDir, False)
+    GPIO.output(__gproDir, true)
     for i in range(10000):
         print('--------------step:', i)
         if i % 2 == 0:
