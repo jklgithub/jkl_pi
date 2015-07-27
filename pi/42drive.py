@@ -14,7 +14,7 @@ def init():
 
 def run():
     print('--------------__sleepTime:', __sleepTime)
-    GPIO.output(__gproDir, true)
+    GPIO.output(__gproDir, True)
     for i in range(10000):
         print('--------------step:', i)
         if i % 2 == 0:
