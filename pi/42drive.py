@@ -4,8 +4,8 @@ import RPi.GPIO as GPIO
 import time
 from time import ctime, sleep
 
-__gproSrep  = 13
-__gproDir   = 19
+__gproSrep  = 5
+__gproDir   = 6
 __sleepTime = 0.00002 #1 / (24000 * 2)
 def init():
     GPIO.setmode(GPIO.BCM)
