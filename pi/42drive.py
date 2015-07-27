@@ -27,4 +27,6 @@ if __name__ == '__main__':
     init()
     time.sleep(1)
     run()
+    GPIO.output(__gproSrep, False)
+    GPIO.output(__gproDir, False)
     GPIO.cleanup()
