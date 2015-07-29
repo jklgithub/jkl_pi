@@ -6,7 +6,7 @@ def init(gpi):
     GPIO.setmode(GPIO.BCM)
     #使能信号
     GPIO.setup(16, GPIO.OUT)
-    GPIO.output(16, True)
+    GPIO.output(16, False)
     GPIO.setup(gpi, GPIO.OUT)
     p = GPIO.PWM(gpi, 50)
     p.start(0)
