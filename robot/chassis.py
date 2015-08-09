@@ -25,13 +25,19 @@ def init():
     p21 = GPIO.PWM(__gproPmw21, 50)
     p22 = GPIO.PWM(__gproPmw22, 50)
 
-    print('start')
-    p11.start(60)
-    p21.start(60)
-    time.sleep(1)
-    print('stop')
-    p11.stop()
-    p21.stop()
+    testP(p11, 60, 1, 'p11')
+    testP(p12, 60, 1, 'p12')
+    testP(p21, 60, 1, 'p21')
+    testP(p22, 60, 1, 'p22')
+    testP(p11, 100, 1, 'p22')
+
+    # print('start')
+    # p11.start(60)
+    # p21.start(60)
+    # time.sleep(1)
+    # print('stop')
+    # p11.stop()
+    # p21.stop()
 
     # __ps[0] = [p11, p12]
     # __ps[1] = [p21, p22]
@@ -48,6 +54,12 @@ def init():
     #     pass
     # p.stop()
     # GPIO.cleanup()
+
+def testP(p, c, t, pn):
+    print('start:' + pn + ", cycle:" + c)
+    p.start(c)
+    time.sleep(t)
+    p.stop()
 
 def gohead(speed, t):
     print('start')
