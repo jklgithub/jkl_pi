@@ -56,7 +56,7 @@ def init():
     # GPIO.cleanup()
 
 def testP(p, c, t, pn):
-    print('start:' + pn + ", cycle:" + c)
+    print('start:', pn, ", cycle:", c)
     p.start(c)
     time.sleep(t)
     p.stop()
