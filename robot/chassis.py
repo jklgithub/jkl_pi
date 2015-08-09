@@ -7,7 +7,7 @@ __gproEn        = 21    #使能信号
 __gproPmw11     = 19
 __gproPmw12     = 16
 __gproPmw21     = 12
-__gproPmw22     = 13
+__gproPmw22     = 6
 __ps            = []
 
 def init():
