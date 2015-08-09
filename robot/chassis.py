@@ -59,6 +59,7 @@ def gohead(speed, t):
     __ps[1][0].stop()
 
 if __name__ == '__main__':
+    GPIO.cleanup()
     init()
 #    gohead(50, 1);
     GPIO.cleanup()
