@@ -26,8 +26,8 @@ def init():
     p22 = GPIO.PWM(__gproPmw22, 50)
 
     print('start')
-    p11.start(50)
-    p21.start(50)
+    p11.start(60)
+    p21.start(60)
     time.sleep(1)
     print('stop')
     p11.stop()
