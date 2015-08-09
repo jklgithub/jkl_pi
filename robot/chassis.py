@@ -4,8 +4,8 @@ import RPi.GPIO as GPIO
 import time
 
 __gproEn        = 21    #使能信号
-__gproPmw11     = 20
-__gproPmw12     = 16
+__gproPmw11     = 16
+__gproPmw12     = 20
 __gproPmw21     = 12
 __gproPmw22     = 22
 __ps            = []
@@ -26,8 +26,8 @@ def init():
     p22 = GPIO.PWM(__gproPmw22, 50)
 
     print('start')
-    p21.start(50)
     p11.start(50)
+    p21.start(50)
     time.sleep(1)
     print('stop')
     p11.stop()
