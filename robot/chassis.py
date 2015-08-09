@@ -42,8 +42,8 @@ def init():
 
 def gohead(speed, t):
     print('start')
-    __ps[0][0].start(speed)
     __ps[1][0].start(speed)
+    __ps[0][0].start(speed)
     time.sleep(t)
     print('stop')
     __ps[0][0].stop()
