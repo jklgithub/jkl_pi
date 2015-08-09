@@ -24,8 +24,17 @@ def init():
     p12 = GPIO.PWM(__gproPmw12, 50)
     p21 = GPIO.PWM(__gproPmw21, 50)
     p22 = GPIO.PWM(__gproPmw22, 50)
-    __ps[0] = [p11, p12]
-    __ps[1] = [p21, p22]
+
+    print('start')
+    p12.start(50)
+    p11.start(50)
+    time.sleep(1)
+    print('stop')
+    p11.stop()
+    p12.stop()
+
+    # __ps[0] = [p11, p12]
+    # __ps[1] = [p21, p22]
 
     # try:
     #     while 1:
@@ -52,7 +61,7 @@ def gohead(speed, t):
 if __name__ == '__main__':
     init()
     gohead(50, 1);
-    GPIO.cleanup()
+#    GPIO.cleanup()
 
 # p = GPIO.PWM(channel, frequency) 创建一个 PWM 实例：
 # p.start(dc)   # dc 代表占空比（范围：0.0 <= dc >= 100.0）
