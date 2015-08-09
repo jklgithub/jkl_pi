@@ -4,10 +4,10 @@ import RPi.GPIO as GPIO
 import time
 
 __gproEn        = 21    #使能信号
-__gproPmw11     = 20
+__gproPmw11     = 19
 __gproPmw12     = 16
 __gproPmw21     = 12
-__gproPmw22     = 22
+__gproPmw22     = 26
 __ps            = []
 
 def init():
@@ -29,7 +29,7 @@ def init():
     testP(p12, 60, 1, 'p12')
     testP(p21, 60, 1, 'p21')
     testP(p22, 60, 1, 'p22')
-    testP(p11, 100, 1, 'p22')
+    testP(p11, 100, 1, 'p11')
 
     # print('start')
     # p11.start(60)
