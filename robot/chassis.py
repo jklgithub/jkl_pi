@@ -11,6 +11,7 @@ __gproPmw22     = 22
 __ps            = []
 
 def init():
+    print('init')
     GPIO.setmode(GPIO.BCM)
     #使能信号
     GPIO.setup(__gproPmw11, GPIO.OUT)
@@ -25,6 +26,7 @@ def init():
     p22 = GPIO.PWM(__gproPmw22, 50)
     __ps[0] = [p11, p12]
     __ps[1] = [p21, p22]
+
     # try:
     #     while 1:
     #         for dc in range(0, 101, 5):
@@ -39,15 +41,18 @@ def init():
     # GPIO.cleanup()
 
 def gohead(speed, t):
+    print('start')
     __ps[0][0].start(speed)
     __ps[1][0].start(speed)
     time.sleep(t)
+    print('stop')
     __ps[0][0].stop()
     __ps[1][0].stop()
 
 if __name__ == '__main__':
     init()
     gohead(50, 1);
+    GPIO.cleanup()
 
 # p = GPIO.PWM(channel, frequency) 创建一个 PWM 实例：
 # p.start(dc)   # dc 代表占空比（范围：0.0 <= dc >= 100.0）
