@@ -7,7 +7,7 @@ __gproEn        = 21    #使能信号
 __gproPmw11     = 19
 __gproPmw12     = 16
 __gproPmw21     = 12
-__gproPmw22     = 26
+__gproPmw22     = 13
 __ps            = []
 
 def init():
@@ -25,10 +25,10 @@ def init():
     p12 = GPIO.PWM(__gproPmw12, 50)
     p21 = GPIO.PWM(__gproPmw21, 50)
 
-    testP(p11, 60, 1, 'p11')
-    testP(p12, 60, 1, 'p12')
-    testP(p21, 60, 1, 'p21')
-    testP(p22, 60, 1, 'p22')
+    testP(p11, 80, 1, 'p11')
+    testP(p12, 80, 1, 'p12')
+    testP(p21, 80, 1, 'p21')
+    testP(p22, 80, 1, 'p22')
     testP(p11, 100, 1, 'p11')
 
     # print('start')
