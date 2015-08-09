@@ -4,8 +4,8 @@ import RPi.GPIO as GPIO
 import time
 
 __gproEn        = 21    #使能信号
-__gproPmw11     = 16
-__gproPmw12     = 20
+__gproPmw11     = 20
+__gproPmw12     = 16
 __gproPmw21     = 12
 __gproPmw22     = 22
 __ps            = []
