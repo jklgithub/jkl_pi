@@ -16,14 +16,14 @@ def init():
     #使能信号
     GPIO.setup(__gproPmw11, GPIO.OUT)
     GPIO.output(__gproPmw11, True)
+    GPIO.setup(__gproPmw22, GPIO.OUT)
     GPIO.setup(__gproPmw11, GPIO.OUT)
     GPIO.setup(__gproPmw12, GPIO.OUT)
     GPIO.setup(__gproPmw21, GPIO.OUT)
-    GPIO.setup(__gproPmw22, GPIO.OUT)
+    p22 = GPIO.PWM(__gproPmw22, 50)
     p11 = GPIO.PWM(__gproPmw11, 50)
     p12 = GPIO.PWM(__gproPmw12, 50)
     p21 = GPIO.PWM(__gproPmw21, 50)
-    p22 = GPIO.PWM(__gproPmw22, 50)
 
     testP(p11, 60, 1, 'p11')
     testP(p12, 60, 1, 'p12')
