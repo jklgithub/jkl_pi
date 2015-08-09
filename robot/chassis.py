@@ -26,12 +26,12 @@ def init():
     p22 = GPIO.PWM(__gproPmw22, 50)
 
     print('start')
-    p12.start(50)
+    p21.start(50)
     p11.start(50)
     time.sleep(1)
     print('stop')
     p11.stop()
-    p12.stop()
+    p21.stop()
 
     # __ps[0] = [p11, p12]
     # __ps[1] = [p21, p22]
