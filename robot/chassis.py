@@ -4,8 +4,8 @@ import RPi.GPIO as GPIO
 import time
 
 __gproEn        = 21    #使能信号
-__gproPmw11     = 16
-__gproPmw12     = 20
+__gproPmw11     = 20
+__gproPmw12     = 16
 __gproPmw21     = 12
 __gproPmw22     = 22
 __ps            = []
@@ -60,8 +60,8 @@ def gohead(speed, t):
 
 if __name__ == '__main__':
     init()
-    gohead(50, 1);
-#    GPIO.cleanup()
+#    gohead(50, 1);
+    GPIO.cleanup()
 
 # p = GPIO.PWM(channel, frequency) 创建一个 PWM 实例：
 # p.start(dc)   # dc 代表占空比（范围：0.0 <= dc >= 100.0）
