@@ -29,7 +29,7 @@ def init():
     testP(p12, 80, 3, 'p12')
     testP(p21, 80, 3, 'p21')
     testP(p22, 80, 3, 'p22')
-    testP(p11, 100, 3, 'p11')
+  #  testP(p11, 100, 3, 'p11')
 
     # print('start')
     # p11.start(60)
