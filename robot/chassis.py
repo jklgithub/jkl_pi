@@ -31,18 +31,43 @@ def init():
     # testP(p22, 80, 3, 'p22')
   #  testP(p11, 100, 3, 'p11')
 
-    # print('start')
-    # p11.start(90)
-    # p21.start(90)
-    # time.sleep(2)
-    # print('stop')
-    # p11.stop()
-    # p21.stop()
+    print('start1')
+    p11.start(90)
+    p21.start(90)
+    time.sleep(2)
+    print('stop1')
+    p11.stop()
+    p21.stop()
 
-    __ps[0] = [p11, p12]
-    __ps[1] = [p21, p22]
+    print('start2')
+    p12.start(90)
+    p22.start(90)
+    time.sleep(2)
+    print('stop2')
+    p12.stop()
+    p22.stop()
 
-    gohead(80, 2)
+    print('start3')
+    p11.start(90)
+    p22.start(90)
+    time.sleep(2)
+    print('stop3')
+    p11.stop()
+    p22.stop()
+
+
+    print('start4')
+    p12.start(90)
+    p21.start(90)
+    time.sleep(2)
+    print('stop4')
+    p12.stop()
+    p21.stop()
+
+    # __ps[0] = [p11, p12]
+    # __ps[1] = [p21, p22]
+    #
+    # gohead(80, 2)
 
 def testP(p, c, t, pn):
     print('start:', pn, ", cycle:", c)
