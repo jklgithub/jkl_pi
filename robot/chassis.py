@@ -31,29 +31,18 @@ def init():
     # testP(p22, 80, 3, 'p22')
   #  testP(p11, 100, 3, 'p11')
 
-    print('start')
-    p11.start(90)
-    p21.start(90)
-    time.sleep(2)
-    print('stop')
-    p11.stop()
-    p21.stop()
+    # print('start')
+    # p11.start(90)
+    # p21.start(90)
+    # time.sleep(2)
+    # print('stop')
+    # p11.stop()
+    # p21.stop()
 
-    # __ps[0] = [p11, p12]
-    # __ps[1] = [p21, p22]
+    __ps[0] = [p11, p12]
+    __ps[1] = [p21, p22]
 
-    # try:
-    #     while 1:
-    #         for dc in range(0, 101, 5):
-    #             p.ChangeDutyCycle(dc);
-    #             time.sleep(0.1)
-    #         for dc in range(100, -1, -5):
-    #             p.ChangeDutyCycle(dc);
-    #             time.sleep(0.1)
-    # except KeyboardInterrupt:
-    #     pass
-    # p.stop()
-    # GPIO.cleanup()
+    gohead(80, 2)
 
 def testP(p, c, t, pn):
     print('start:', pn, ", cycle:", c)
@@ -63,8 +52,8 @@ def testP(p, c, t, pn):
 
 def gohead(speed, t):
     print('start')
-    __ps[1][0].start(speed)
     __ps[0][0].start(speed)
+    __ps[1][0].start(speed)
     time.sleep(t)
     print('stop')
     __ps[0][0].stop()

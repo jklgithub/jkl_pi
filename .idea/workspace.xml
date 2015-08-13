@@ -117,8 +117,8 @@
       <file leaf-file-name="chassis.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot/chassis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.453125" vertical-offset="105" max-vertical-offset="1395">
-              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.5625" vertical-offset="240" max-vertical-offset="1230">
+              <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
               <folding>
                 <element signature="e#37#60#0" expanded="true" />
               </folding>
@@ -1032,8 +1032,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robot/chassis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.453125" vertical-offset="105" max-vertical-offset="1395">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.5625" vertical-offset="240" max-vertical-offset="1230">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
           <folding>
             <element signature="e#37#60#0" expanded="true" />
           </folding>
