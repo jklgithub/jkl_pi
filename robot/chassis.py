@@ -6,8 +6,8 @@ import time
 __gproEn        = 21    #使能信号
 __gproPmw11     = 19
 __gproPmw12     = 16
-__gproPmw21     = 12
-__gproPmw22     = 6
+__gproPmw21     = 6
+__gproPmw22     = 12
 __ps            = []
 
 def init():
@@ -25,19 +25,19 @@ def init():
     p21 = GPIO.PWM(__gproPmw21, 100)
     p22 = GPIO.PWM(__gproPmw22, 100)
 
-    testP(p11, 80, 3, 'p11')
-    testP(p12, 80, 3, 'p12')
-    testP(p21, 80, 3, 'p21')
-    testP(p22, 80, 3, 'p22')
+    # testP(p11, 80, 3, 'p11')
+    # testP(p12, 80, 3, 'p12')
+    # testP(p21, 80, 3, 'p21')
+    # testP(p22, 80, 3, 'p22')
   #  testP(p11, 100, 3, 'p11')
 
-    # print('start')
-    # p11.start(60)
-    # p21.start(60)
-    # time.sleep(1)
-    # print('stop')
-    # p11.stop()
-    # p21.stop()
+    print('start')
+    p11.start(60)
+    p21.start(60)
+    time.sleep(1)
+    print('stop')
+    p11.stop()
+    p21.stop()
 
     # __ps[0] = [p11, p12]
     # __ps[1] = [p21, p22]
