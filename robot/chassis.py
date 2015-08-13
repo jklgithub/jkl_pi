@@ -35,7 +35,7 @@ def init():
     p11.start(90)
     p21.start(90)
     time.sleep(2)
-    print('stop1')
+    # print('stop1')
     p11.stop()
     p21.stop()
 
@@ -43,7 +43,7 @@ def init():
     p12.start(90)
     p22.start(90)
     time.sleep(2)
-    print('stop2')
+    # print('stop2')
     p12.stop()
     p22.stop()
 
@@ -51,16 +51,15 @@ def init():
     p11.start(90)
     p22.start(90)
     time.sleep(2)
-    print('stop3')
+    # print('stop3')
     p11.stop()
     p22.stop()
-
 
     print('start4')
     p12.start(90)
     p21.start(90)
     time.sleep(2)
-    print('stop4')
+    # print('stop4')
     p12.stop()
     p21.stop()
 
