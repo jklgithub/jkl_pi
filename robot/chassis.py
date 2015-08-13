@@ -6,8 +6,8 @@ import time
 __gproEn        = 21    #使能信号
 __gproPmw11     = 19
 __gproPmw12     = 16
-__gproPmw21     = 6
-__gproPmw22     = 12
+__gproPmw21     = 12
+__gproPmw22     = 6
 __ps            = []
 
 def init():
@@ -32,9 +32,9 @@ def init():
   #  testP(p11, 100, 3, 'p11')
 
     print('start')
-    p11.start(60)
-    p21.start(60)
-    time.sleep(1)
+    p11.start(90)
+    p21.start(90)
+    time.sleep(2)
     print('stop')
     p11.stop()
     p21.stop()
