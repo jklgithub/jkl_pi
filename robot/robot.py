@@ -16,6 +16,8 @@ def init():
     GPIO.setmode(GPIO.BCM)
 
 def test1():
+    GPIO.setup(21, GPIO.OUT)
+    GPIO.output(21, True)
     motorLeft = class_motor.Motor(19, 16, 13)
     motorLeft.gohead(100, 2000)
     motorRight = class_motor.Motor(12, 6, 26)
