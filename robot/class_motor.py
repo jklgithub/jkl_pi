@@ -13,6 +13,8 @@ class Motor:
         self.gpioOut1   = gpioOut1  #pwm1
         self.gpioOut2   = gpioOut2  #pwm2
         self.gpioIn     = gpioIn    #
+        self.out1Run    = False
+        self.out2Run    = False
         # GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.gpioOut1, GPIO.OUT)
         GPIO.setup(self.gpioOut2, GPIO.OUT)
@@ -26,14 +28,15 @@ class Motor:
 
     def mileageChange(self, ev):
         self.mileage    = self.mileage + 1
-        print('mileageChange_', self.gpioIn, ':', self.mileage)
-        if self.mileage >= self.out1_l:
+        print('mileageChange', self.gpioIn, ':', self.mileage, 'self.out1_l:', self.out1_l)
+        if self.out1Run and self.mileage >= self.out1_l:
             self.out1.stop()
 
     def gohead(self, speed, l):
         self.out2.stop()
         self.out1.start(speed)
-        self.out1_l = self.mileage + l
+        self.out1Run    = True
+        self.out1_l     = self.mileage + l
 
     def retreat(self, speed):
         self.out1.stop()
@@ -42,6 +45,8 @@ class Motor:
     def stop(self):
         self.out1.stop()
         self.out2.stop()
+        self.out1Run    = False
+        self.out2Run    = False
 
 if __name__ == '__main__':
     motor1  = Motor(19, 16, 13)
