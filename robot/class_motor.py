@@ -26,7 +26,7 @@ class Motor:
 
     def mileageChange(self, ev):
         self.mileage    = self.mileage + 1
-        print('mileageChange:', self.mileage)
+        print('mileageChange_', self.gpioIn, ':', self.mileage)
 
     def gohead(self, speed):
         self.out2.stop()
