@@ -16,9 +16,9 @@ def init():
 def test1():
     event.bind('input_13_change', inputChange)
     event.bind('input_26_change', inputChange)
-    gpioInputTimeline.init()
     gpioInputTimeline.register(13, 'input_13_change')
     gpioInputTimeline.register(26, 'input_26_change')
+    gpioInputTimeline.init()
 
 def inputChange(p):
     print(p)
