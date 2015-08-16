@@ -25,7 +25,7 @@ class Motor:
         gpioInputTimeline.register(self.gpioIn, evKey)
 
     def mileageChange(self, ev):
-        self.mileage    = self.mileage
+        self.mileage    = self.mileage + 1
         print('mileageChange:', self.mileage)
 
     def gohead(self, speed):
