@@ -14,7 +14,7 @@ def init():
             inp         = __inputs[gpio]
             v           = GPIO.input(gpio)
             inp['now']  = v;
-            print('timeline: ', v)
+            # print('timeline: ', v)
             if inp['see'] and v != inp['last']:
                 __inputs[gpio]['last'] = v;
                 event.trigger(inp['event_key'], {
@@ -24,7 +24,7 @@ def init():
                 })
                 __inputs[gpio]['time0']   = datetime.datetime.now()
         # time.sleep(0.0001)
-        time.sleep(0.1)
+        time.sleep(0.0001)
 
 def register(gpio, eventKey):
     GPIO.setup(gpio, GPIO.IN)
@@ -36,7 +36,7 @@ def register(gpio, eventKey):
         'now'       : v,
         'last'      : v
     }
-    print('register: ', __inputs)
+    # print('register: ', __inputs)
 
 def pause(gpio):
     __inputs[gpio]['see']   = False
