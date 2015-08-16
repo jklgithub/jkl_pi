@@ -36,7 +36,7 @@ def register(gpio, eventKey):
         'now'       : v,
         'last'      : v
     }
-    # print('register: ', __inputs)
+    print('register: ', gpio, eventKey, '__inputs:', __inputs)
 
 def pause(gpio):
     __inputs[gpio]['see']   = False
