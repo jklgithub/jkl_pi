@@ -13,10 +13,10 @@ class Motor:
         self.gpioOut1   = gpioOut1  #pwm1
         self.gpioOut2   = gpioOut2  #pwm2
         self.gpioIn     = gpioIn    #
-        GPIO.setmode(GPIO.BCM)
+        # GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.gpioOut1, GPIO.OUT)
         GPIO.setup(self.gpioOut2, GPIO.OUT)
-        GPIO.setup(self.gpioIn, GPIO.In)
+        # GPIO.setup(self.gpioIn, GPIO.In)
         self.out1       = GPIO.PWM(self.gpioOut1, self.freq)
         self.out2       = GPIO.PWM(self.gpioOut2, self.freq)
         self.mileage    = 0
