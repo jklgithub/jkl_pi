@@ -9,6 +9,7 @@ __inputs    = {} #{‘see’: 是否监听, ‘event_key’: #发生变化时的
 
 def init():
     while(True):
+        print('init-while: ', __inputs)
         for gpio in __inputs:
             inp         = __inputs[gpio]
             v           = GPIO.input(gpio)
@@ -35,6 +36,7 @@ def register(gpio, eventKey):
         'now'       : v,
         'last'      : v
     }
+    print('register: ', __inputs)
 
 def pause(gpio):
     __inputs[gpio]['see']   = False
