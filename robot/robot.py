@@ -17,9 +17,9 @@ def init():
 
 def test1():
     motorLeft = class_motor.Motor(19, 16, 13)
-    motorLeft.gohead(65, 2000)
+    motorLeft.gohead(100, 2000)
     motorRight = class_motor.Motor(12, 6, 26)
-    motorRight.gohead(65, 2000)
+    motorRight.gohead(100, 2000)
 
     # print('test1-start')
     # event.bind('input_13_change', inputChange)
