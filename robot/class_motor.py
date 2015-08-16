@@ -33,6 +33,7 @@ class Motor:
             self.out1.stop()
 
     def gohead(self, speed, l):
+        print('gohead', self.gpioIn, ':', speed, 'self.out1_l:', l)
         self.out2.stop()
         self.out1.start(speed)
         self.out1Run    = True
