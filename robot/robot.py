@@ -4,11 +4,11 @@ import os;
 rootPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(rootPath)
 import pi.gpioInputTimeline as gpioInputTimeline
+import pi.event as eventå
 import RPi.GPIO as GPIO
-import event
-import threading
+# import threading
 # import srf05
-from time import ctime, sleep
+# from time import ctime, sleep
 
 def init():
     GPIO.setmode(GPIO.BCM)
