@@ -6,7 +6,7 @@ sys.path.append(rootPath)
 import pi.gpioInputTimeline as gpioInputTimeline
 import pi.event as event
 import RPi.GPIO as GPIO
-# import threading
+import threading
 # import srf05
 # from time import ctime, sleep
 
@@ -18,16 +18,26 @@ def test1():
     event.bind('input_26_change', inputChange)
     gpioInputTimeline.register(13, 'input_13_change')
     gpioInputTimeline.register(26, 'input_26_change')
-    gpioInputTimeline.init()
 
 def inputChange(p):
     print(p)
 
+def gpioInputTimelineStart():
+    gpioInputTimeline.init()
+
+threads = []
+t1 = threading.Thread(target=gpioInputTimelineStart, args=())
+threads.append(t1)
+t2 = threading.Thread(target=test1, args=())
+threads.append(t2)
 
 if __name__ == '__main__':
     GPIO.cleanup()
     init()
-    test1()
+    for t in threads:
+        t.setDaemon(True)
+        t.start()
+    t.join()
     GPIO.cleanup()
 
 
