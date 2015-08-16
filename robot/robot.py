@@ -26,6 +26,7 @@ def inputChange(p):
 
 if __name__ == '__main__':
     GPIO.cleanup()
+    init()
     test1()
     GPIO.cleanup()
 
