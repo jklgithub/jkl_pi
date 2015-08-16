@@ -4,7 +4,7 @@ import os;
 rootPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(rootPath)
 import pi.gpioInputTimeline as gpioInputTimeline
-import pi.event as eventå
+import pi.event as event
 import RPi.GPIO as GPIO
 # import threading
 # import srf05
