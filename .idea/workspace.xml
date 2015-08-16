@@ -97,8 +97,8 @@
       <file leaf-file-name="class_motor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot/class_motor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.546875" vertical-offset="0" max-vertical-offset="960">
-              <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.484375" vertical-offset="0" max-vertical-offset="960">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="32" selection-end-column="18" />
               <folding>
                 <element signature="e#20#31#0" expanded="true" />
               </folding>
@@ -1063,8 +1063,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robot/class_motor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.546875" vertical-offset="0" max-vertical-offset="960">
-          <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.484375" vertical-offset="0" max-vertical-offset="960">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="32" selection-end-column="18" />
           <folding>
             <element signature="e#20#31#0" expanded="true" />
           </folding>
