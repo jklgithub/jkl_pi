@@ -8,6 +8,7 @@ import pi.event as event
 import RPi.GPIO as GPIO
 import threading
 import time
+import class_motor
 # import srf05
 # from time import ctime, sleep
 
@@ -15,12 +16,15 @@ def init():
     GPIO.setmode(GPIO.BCM)
 
 def test1():
-    print('test1-start')
-    event.bind('input_13_change', inputChange)
-    event.bind('input_26_change', inputChange)
-    gpioInputTimeline.register(13, 'input_13_change')
-    gpioInputTimeline.register(26, 'input_26_change')
-    print('test1-end')
+    motorLeft = class_motor.Motor(19, 16, 13)
+    motorLeft.gohead(95)
+
+    # print('test1-start')
+    # event.bind('input_13_change', inputChange)
+    # event.bind('input_26_change', inputChange)
+    # gpioInputTimeline.register(13, 'input_13_change')
+    # gpioInputTimeline.register(26, 'input_26_change')
+    # print('test1-end')
 
 def inputChange(p):
     print(p)
@@ -57,7 +61,6 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print('main-7-KeyboardInterrupt')
         pass
-
     GPIO.cleanup()
     print('main-8-over')
 

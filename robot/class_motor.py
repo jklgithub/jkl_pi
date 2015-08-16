@@ -1,13 +1,11 @@
 #coding:utf-8 电机控制类
-__ispi = False
-if(__ispi):
-    import RPi.GPIO as GPIO
-else:
-    import sys;
-    import os;
-    rootPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    sys.path.append(rootPath)
-    import test_gpio.gpio as GPIO
+import sys;
+import os;
+rootPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(rootPath)
+import pi.gpioInputTimeline as gpioInputTimeline
+import pi.event as event
+import RPi.GPIO as GPIO
 
 class Motor:
     def __init__(self, gpioOut1, gpioOut2, gpioIn):
@@ -19,20 +17,28 @@ class Motor:
         GPIO.setup(self.gpioOut1, GPIO.OUT)
         GPIO.setup(self.gpioOut2, GPIO.OUT)
         GPIO.setup(self.gpioIn, GPIO.In)
-        p11 = GPIO.PWM(self.gpioOut1, self.freq)
-        p12 = GPIO.PWM(self.gpioOut2, self.freq)
+        self.out1       = GPIO.PWM(self.gpioOut1, self.freq)
+        self.out2       = GPIO.PWM(self.gpioOut2, self.freq)
+        self.mileage    = 0
+        evKey           = 'input_' + str(self.gpioIn) + '_change'
+        event.bind(evKey, self.mileageChange)
+        gpioInputTimeline.register(self.gpioIn, evKey)
+
+    def mileageChange(self, ev):
+        self.mileage    = self.mileage
+        print('mileageChange:', self.mileage)
 
     def gohead(self, speed):
-        self.gpioOut2.stop()
-        self.gpioOut1.start(speed)
+        self.out2.stop()
+        self.out1.start(speed)
 
     def retreat(self, speed):
-        self.gpioOut1.stop()
-        self.gpioOut2.start(speed)
+        self.out1.stop()
+        self.out2.start(speed)
 
     def stop(self):
-        self.gpioOut1.stop()
-        self.gpioOut2.stop()
+        self.out1.stop()
+        self.out2.stop()
 
 if __name__ == '__main__':
     motor1  = Motor(19, 16, 13)
