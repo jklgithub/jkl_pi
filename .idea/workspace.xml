@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62edd3d3-f713-452a-b0a1-094789892f96" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robot/robot.py" afterPath="$PROJECT_DIR$/robot/robot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robot/class_motor.py" afterPath="$PROJECT_DIR$/robot/class_motor.py" />
     </list>
     <ignored path="jkl_pi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="robot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="robot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25" vertical-offset="45" max-vertical-offset="1695">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1695">
               <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding>
                 <element signature="e#29#40#0" expanded="true" />
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class_motor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="class_motor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot/class_motor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.46875" vertical-offset="0" max-vertical-offset="960">
+              <caret line="30" column="90" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
               <folding>
                 <element signature="e#20#31#0" expanded="true" />
               </folding>
@@ -161,8 +161,8 @@
         <option value="$PROJECT_DIR$/robot/chassis.py" />
         <option value="$PROJECT_DIR$/robot/motor.class.py" />
         <option value="$PROJECT_DIR$/pi/gpioInputTimeline.py" />
-        <option value="$PROJECT_DIR$/robot/class_motor.py" />
         <option value="$PROJECT_DIR$/robot/robot.py" />
+        <option value="$PROJECT_DIR$/robot/class_motor.py" />
       </list>
     </option>
   </component>
@@ -1045,16 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot/class_motor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#20#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot/chassis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
@@ -1067,10 +1057,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robot/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25" vertical-offset="45" max-vertical-offset="1695">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1695">
           <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding>
             <element signature="e#29#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot/class_motor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46875" vertical-offset="0" max-vertical-offset="960">
+          <caret line="30" column="90" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
+          <folding>
+            <element signature="e#20#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
