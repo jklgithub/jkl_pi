@@ -14,8 +14,8 @@ def init():
     GPIO.setmode(GPIO.BCM)
 
 def test1():
-    event.bind('input_13_change')
-    event.bind('input_26_change')
+    event.bind('input_13_change', inputChange)
+    event.bind('input_26_change', inputChange)
     gpioInputTimeline.init()
     gpioInputTimeline.register(13, 'input_13_change')
     gpioInputTimeline.register(26, 'input_26_change')
