@@ -22,10 +22,10 @@ def test1():
     motorRight = class_motor.Motor(6, 12, 26)
     motorLeft.gohead(100, 500)
     motorRight.gohead(100, 500)
-
+    time.sleep(10)
     motorLeft.gohead(100, 20)
     motorLeft.retreat(100, 20)
-    
+    time.sleep(2)
     motorLeft.retreat(100, 500)
     motorRight.retreat(100, 500)
 
