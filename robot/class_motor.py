@@ -27,21 +27,31 @@ class Motor:
         gpioInputTimeline.register(self.gpioIn, evKey)
 
     def mileageChange(self, ev):
-        self.mileage    = self.mileage + 1
-        print('mileageChange', self.gpioIn, ':', self.mileage, 'self.out1_l:', self.out1_l, ev)
-        if self.out1Run and self.mileage >= self.out1_l:
-            self.out1.stop()
+        if(self.out1Run):
+            self.mileage    = self.mileage + 1
+            print('mileageChange', self.gpioIn, ':', self.mileage, 'self.out1_l:', self.out1_l, ev)
+            if self.out1Run and self.mileage >= self.out1_l:
+                self.out1.stop()
+        if(self.out2Run):
+            self.mileage    = self.mileage - 1
+            print('mileageChange', self.gpioIn, ':', self.mileage, 'self.out1_l:', self.out2_l, ev)
+            if self.out2Run and self.mileage >= self.out2_l:
+                self.out2.stop()
 
     def gohead(self, speed, l):
         print('gohead', self.gpioIn, ':', speed, 'self.out1_l:', l)
         self.out2.stop()
         self.out1.start(speed)
         self.out1Run    = True
+        self.out2Run    = False
         self.out1_l     = self.mileage + l
 
-    def retreat(self, speed):
+    def retreat(self, speed, l):
         self.out1.stop()
         self.out2.start(speed)
+        self.out1Run    = False
+        self.out2Run    = True
+        self.out2_l     = self.mileage - l
 
     def stop(self):
         self.out1.stop()
