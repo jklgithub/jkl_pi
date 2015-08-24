@@ -19,9 +19,16 @@ def test1():
     GPIO.setup(21, GPIO.OUT)
     GPIO.output(21, True)
     motorLeft = class_motor.Motor(16, 19, 13)
-    motorLeft.gohead(100, 500)
     motorRight = class_motor.Motor(6, 12, 26)
+    motorLeft.gohead(100, 500)
     motorRight.gohead(100, 500)
+
+    motorLeft.gohead(100, 20)
+    motorLeft.retreat(100, 20)
+    
+    motorLeft.retreat(100, 500)
+    motorRight.retreat(100, 500)
+
 
     # print('test1-start')
     # event.bind('input_13_change', inputChange)
